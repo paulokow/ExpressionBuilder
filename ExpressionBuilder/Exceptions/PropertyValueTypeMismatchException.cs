@@ -11,17 +11,17 @@ namespace ExpressionBuilder.Exceptions
         /// <summary>
         /// Name of the property or fields.
         /// </summary>
-        public string MemberName { get; }
+        public string MemberName { get; private set; }
 
         /// <summary>
         /// Type of the property or field.
         /// </summary>
-        public string MemberType { get; }
+        public string MemberType { get; private set; }
 
         /// <summary>
         /// Type of the constant which value tried to be attributed to the property or field.
         /// </summary>
-        public string ConstantType { get; }
+        public string ConstantType { get; private set; }
 
         /// <summary>
         /// Gets a message that describes the current exception.

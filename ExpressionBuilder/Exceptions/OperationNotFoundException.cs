@@ -11,7 +11,7 @@ namespace ExpressionBuilder.Exceptions
         /// <summary>
         /// Name of the operation that was intended to be instantiated.
         /// </summary>
-        public string OperationName { get; }
+        public string OperationName { get; private set; }
 
         /// <inheritdoc />
         public override string Message

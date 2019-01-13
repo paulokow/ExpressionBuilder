@@ -11,22 +11,22 @@ namespace ExpressionBuilder.Operations
     public abstract class OperationBase : IOperation, IEquatable<IOperation>
     {
         /// <inheritdoc />
-        public string Name { get; }
+        public string Name { get; private set; }
 
         /// <inheritdoc />
-        public TypeGroup TypeGroup { get; }
+        public TypeGroup TypeGroup { get; private set; }
 
         /// <inheritdoc />
-        public int NumberOfValues { get; }
+        public int NumberOfValues { get; private set; }
 
         /// <inheritdoc />
         public bool Active { get; set; }
 
         /// <inheritdoc />
-        public bool SupportsLists { get; }
+        public bool SupportsLists { get; private set; }
 
         /// <inheritdoc />
-        public bool ExpectNullValues { get; }
+        public bool ExpectNullValues { get; private set; }
 
         /// <summary>
         /// Instantiates a new operation.
@@ -59,7 +59,7 @@ namespace ExpressionBuilder.Operations
         /// <inheritdoc />
         public override bool Equals(object obj)
         {
-            if (obj is null)
+            if (obj == null)
             {
                 return false;
             }
